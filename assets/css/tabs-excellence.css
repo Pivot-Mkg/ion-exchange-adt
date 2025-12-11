@@ -5,8 +5,11 @@
 .primary-content-section {
   background-color: #0f1b2d;
   box-sizing: border-box;
-  padding: 50px 0;
+  padding: 50px;
   margin-top: 40px;
+  width: 96%;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 .primary-content-section .section-heading {
   margin-bottom: 0;
@@ -30,7 +33,7 @@
 }
 
 .tab-toggle-btn {
-  padding: 10px 22px;
+  padding: 16px 22px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -38,6 +41,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .tab-toggle-btn-active {
@@ -75,11 +79,12 @@
 .primary-card-caption {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 20px;
 }
 
 .primary-card-caption h1 {
-  color: #2dd4bf;
+  color: #3edaff;
   font-size: 22px;
   margin-bottom: 9px;
 }
@@ -97,8 +102,10 @@
   font-size: 14px;
   display: block;
   text-decoration: none;
-  color: #2dd4bf;
+  color: #3edaff;
+  font-weight: 600;
   width: fit-content;
+  
 }
 
 .primary-card-cta::after {
@@ -189,6 +196,8 @@
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+
 }
 
 .tab-toggle-btn:hover {

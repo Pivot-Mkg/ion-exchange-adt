@@ -144,6 +144,9 @@
             border-radius: 22px;
             backdrop-filter: blur(16px);
             z-index: 1000;
+            /* background-color: rgba(0, 0, 0, 0.2); */
+            border-radius: 20px 20px 20px 20px;
+            backdrop-filter: blur(10px);
         }
 
         body.nav-fixed .hero-inner {
@@ -509,7 +512,7 @@
             /* padding-top: 40px;
             padding-bottom: 40px; */
             position: absolute;
-            bottom: -240px;
+            bottom: -188px;
             width: 100%;
         }
 
@@ -766,22 +769,27 @@
             border-radius: 20px;
             padding: 0;
             position: relative;
-            height: 100%;
-            width: 100%;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            aspect-ratio: 1/1;
+            /* Maintain square aspect ratio */
+            min-height: 400px;
+            /* Set a minimum height */
+            max-height: 500px;
+            /* Set a maximum height */
+            width: 100%;
         }
 
         .sustain-visual img {
             width: 100%;
             height: 100%;
-            min-width: 100%;
-            min-height: 100%;
             object-fit: cover;
-            object-position: center;
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .sustain-visual::after {
@@ -838,6 +846,7 @@
             font-weight: 600;
             color: #028676;
             margin-top: 5px;
+            font-size: 14px;
         }
 
         .net-card a.cta-link svg {
@@ -1060,7 +1069,7 @@
             background: rgba(255, 255, 255, 0.10);
             padding: 20px;
             text-align: center;
-            min-width: 180px;
+            min-width: 46%;
             color: #6EE7B7;
             transition: all 0.3s ease;
             transform: translateY(0);
@@ -1072,7 +1081,7 @@
             background: rgba(255, 255, 255, 0.10);
             padding: 20px;
             text-align: center;
-            min-width: 180px;
+            min-width: 46%;
             color: #6EE7B7;
             transition: all 0.3s ease;
             transform: translateY(0);
@@ -1276,6 +1285,7 @@
                 width: calc(100% - 32px);
                 padding: 16px;
                 transform: translateY(6px);
+
             }
 
             .hero-actions {
@@ -1814,10 +1824,33 @@
         }
     </style>
 
-
     <style>
         .primary-content-section p {
             color: #fff;
+        }
+    </style>
+
+    <style>
+        /* for width exceeding 1200 */
+
+        @media (min-width: 1400px) {
+
+            .primary-content-section {
+                margin-top: 0;
+
+            }
+
+            .track-record-section {
+                bottom: -188px;
+            }
+
+            .hero-content {
+                bottom: 40%;
+            }
+
+            body.nav-fixed .site-nav{
+                padding: 22px 32px;
+            }
         }
     </style>
 </head>
@@ -2062,7 +2095,7 @@
 
 
     <section class="primary-content-section">
-        <div class="container">
+        <div>
             <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="primary-section-header-title" style="color: #3edaff;">
                     Manufacturing Excellence
@@ -2078,7 +2111,29 @@
                             stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="tab-wrapper">
+                <div class="tab-wrapper"
+                    style="overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
+                    <style>
+                        .tab-wrapper::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .tab-list {
+                            display: flex;
+                            min-width: 100%;
+                            width: 1000%;
+                        }
+
+                        .tab-list li {
+                            flex: 0 0 20%;
+                            max-width: 20%;
+                        }
+
+                        .tab-toggle-btn {
+                            display: block;
+                            width: 100%;
+                        }
+                    </style>
                     <ul class="tab-list">
                         <li>
                             <label for="me-tab-1" class="tab-toggle-btn tab-toggle-btn-active">Roha, Maharashtra</label>
@@ -2135,7 +2190,8 @@
                                     manufacturing.
                                 </p>
                             </div>
-                            <a href="#" class="primary-card-cta">Learn more</a>
+                            <a href="#" class=" primary-card-cta">Learn more
+                            </a>
 
                         </figcaption>
                     </figure>
@@ -2164,7 +2220,9 @@
                                     manufacturing.
                                 </p>
                             </div>
-                            <a href="#" class="primary-card-cta">Learn more</a>
+                            <div class="net-card">
+                                <a href="#" class="primary-card-cta">Learn more</a>
+                            </div>
 
                         </figcaption>
                     </figure>
