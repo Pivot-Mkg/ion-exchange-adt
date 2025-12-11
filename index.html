@@ -26,6 +26,13 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
+
     <style>
         :root {
             --primary: #289d60;
@@ -51,6 +58,7 @@
             background-color: #f8fdfd;
             color: var(--text-dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .logo img {
@@ -217,10 +225,10 @@
         }
 
         .hero-content h1 {
-            font-size: clamp(42px, 8vw, 45px);
+            font-size: clamp(42px, 8vw, 40px);
             line-height: 1.15;
             margin: 0 0 24px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .hero-content .highlight {
@@ -984,7 +992,7 @@
         }
 
         .metric-card:hover::before {
-            transform: scale(1.05);
+            transform: scale(1.15);
         }
 
         .metric-card>* {
@@ -1178,6 +1186,9 @@
             line-height: 20px;
             margin-top: 16px;
             /* 142.857% */
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
         }
 
         .newsletter {
@@ -1228,7 +1239,7 @@
             padding: 0 18px;
             cursor: pointer;
             border-radius: 31px;
-            padding: 13px;
+            padding: 10px;
         }
 
         .footer-bottom {
@@ -1321,7 +1332,7 @@
 
         #scroll-container {
             margin-bottom: 50px;
-            padding-top:300px;
+            padding-top: 300px;
             padding-bottom: 300px;
         }
 
@@ -1364,7 +1375,8 @@
         }
 
         .track-record-header .highlight {
-            color: #2DD4BF;
+            /* color: #2DD4BF; */
+            color: rgb(62 218 255);
         }
 
         .track-record-header p {
@@ -1385,10 +1397,10 @@
         .stat-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            padding: 30px 20px;
+            padding: 18px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(1px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -1398,15 +1410,15 @@
         }
 
         .stat-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 20px;
+            width: 45px;
+            height: 45px;
+            margin: 0 auto 10px;
             background: rgba(45, 212, 191, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #2DD4BF;
+            color: #3edaff;
             font-size: 24px;
         }
 
@@ -1821,7 +1833,7 @@
     <section class="hero">
         <div class="hero-mask"></div>
         <div class="hero-inner container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <h1>
                     Empowering a <span class="highlight">Sustainable Future</span> with End-to-End <span
                         class="highlight">Water Treatment</span> Solutions
@@ -1853,7 +1865,7 @@
         </div>
 
         <!-- Header (Aligned Left, 80% Width) -->
-        <div class="po-container po-header-wrapper">
+        <div class="po-container po-header-wrapper" data-aos="fade-up" data-aos-duration="800">
             <h1 class="po-title">
                 Product Offerings
             </h1>
@@ -1863,7 +1875,8 @@
         </div>
 
         <!-- Main Container (80% Width) -->
-        <div id="app-container" class="po-container po-content-area">
+        <div id="app-container" class="po-container po-content-area" data-aos="zoom-in" data-aos-duration="1000"
+            data-aos-delay="200">
 
             <!-- Mobile View -->
             <div id="mobile-view" class="po-mobile-only po-flex-col po-gap-6 po-mobile-list">
@@ -1931,12 +1944,12 @@
             <div class="track-record-overlay"></div>
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="track-record-content">
-                    <div class="track-record-header">
-                        <h2>Proven <span class="highlight">Track Record</span></h2>
+                    <div class="track-record-header" data-aos="fade-up" data-aos-duration="800">
+                        <h2> <span class="highlight">Proven Track Record</span></h2>
                         <!-- <p>Numbers that speak to our experience, global reach, and unwavering commitment to excellence in total water management.</p> -->
                     </div>
                     <div class="track-record-stats">
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                             <div class="stat-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1948,7 +1961,7 @@
                             <div class="stat-number" data-count="60">0</div>
                             <div class="stat-label">YEARS EXPERIENCE</div>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card " data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <div class="stat-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1959,7 +1972,7 @@
                             <div class="stat-number" data-count="10000">0</div>
                             <div class="stat-label">INSTALLATIONS</div>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                             <div class="stat-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1973,7 +1986,7 @@
                             <div class="stat-number" data-count="7">0</div>
                             <div class="stat-label">FACILITIES</div>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                             <div class="stat-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1999,7 +2012,7 @@
         <!-- Header -->
         <div class="w-full relative z-20">
             <div class="container mx-auto px-4">
-                <div class="text-center pt-8 pb-4">
+                <div class="text-center pt-8 pb-4" data-aos="fade-up" data-aos-duration="800">
                     <h2 class="text-3xl md:text-4xl font-bold text-teal-600 mb-2 po-title">Our Journey</h2>
                     <p class="text-gray-500">Pioneering water solutions for over 60 years</p>
                 </div>
@@ -2008,7 +2021,8 @@
 
         <!-- Timeline Container -->
         <div id="scroll-container"
-            class="w-full relative overflow-x-auto overflow-y-hidden hide-scrollbar h-full flex items-center touch-pan-x snap-x snap-mandatory">
+            class="w-full relative overflow-x-auto overflow-y-hidden hide-scrollbar h-full flex items-center touch-pan-x snap-x snap-mandatory"
+            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
             <div id="timeline-content" class="relative min-w-max pb-20 pt-5 pl-8 pr-0 h-[700px]">
 
@@ -2030,7 +2044,7 @@
 
     <section class="primary-content-section">
         <div class="container">
-            <div class="section-heading">
+            <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="primary-section-header-title" style="color: #3edaff;">
                     Manufacturing Excellence
                 </h2>
@@ -2038,7 +2052,7 @@
                     quality and sustainability</p>
             </div>
 
-            <div class="tab-slider-container">
+            <div class="tab-slider-container" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="200">
                 <button class="slider-arrow prev-arrow" aria-label="Previous tabs" style="transform: rotate(180);">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -2079,7 +2093,8 @@
             </div>
 
             <!-- panel 1 -->
-            <div id="me-tab-1" class="manufacturing-excellence-tab-panel manufacturing-excellence-tab-panel-active">
+            <div id="me-tab-1" class="manufacturing-excellence-tab-panel manufacturing-excellence-tab-panel-active"
+                data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
                 <div class="content-wrapper">
                     <div class="map-wrapper">
                         <iframe
@@ -2290,14 +2305,15 @@
             <!-- <p>From Net Zero operations to global community outreach, we're leading the way in sustainable water
                 treatment.</p> -->
         </div>
-        <div class="container sustainability-grid">
-            <div class="sustain-visual">
+        <div class="container sustainability-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="sustain-visual" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <img id="sustain-image"
                     src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
                     alt="Sustainability highlight">
                 <div class="image-badge" id="sustain-image-label">Featured Initiative</div>
             </div>
-            <div class="sustain-list" id="sustain-list">
+            <div class="sustain-list" id="sustain-list" data-aos="fade-left" data-aos-duration="1000"
+                data-aos-delay="200">
                 <article class="sustain-item active"
                     data-image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
                     data-badge="Featured Initiative">
@@ -2400,15 +2416,19 @@
             </div>
         </div>
         <div class="container metrics-row">
-            <div class="metric-card" data-count="90" data-suffix="%">
+            <div class="metric-card" data-count="90" data-suffix="%" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="200">
                 <div class="metric-value">0%</div>
                 <span>Water Recycled</span>
             </div>
-            <div class="metric-card" data-count="60" data-suffix="%">
+
+            <div class="metric-card" data-count="60" data-suffix="%" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="400">
                 <div class="metric-value">0%</div>
                 <span>Renewable Energy</span>
             </div>
-            <div class="metric-card" data-count="0">
+
+            <div class="metric-card" data-count="0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                 <div class="metric-value">0</div>
                 <span>Net Carbon</span>
             </div>
@@ -2416,11 +2436,11 @@
     </section>
 
     <section class="globe">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
             <h2>Global <span>Expansion</span></h2>
             <p>Connecting the world with cutting-edge water solutions and digital transformation.</p>
         </div>
-        <section class="globe-section">
+        <section class="globe-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
             <!-- LEFT SIDE: GLOBE WRAPPER (65%) -->
             <div id="globe-container-wrapper">
@@ -2463,7 +2483,7 @@
 
 
     <section class="section section-dark" id="about">
-        <div class="container foundation-card">
+        <div class="container foundation-card" data-aos="slide-up" data-aos-duration="1000">
             <div>
                 <div class="foundation-logo">ION EXCHANGE<br>FOUNDATION</div>
                 <p>Through Ion Foundation, we're committed to providing clean water access to underserved communities
@@ -2504,7 +2524,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer-main">
+            <div class="footer-main" data-aos="fade-up" data-aos-duration="800">
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <img src="./assets/images/ion-logo.png" alt="" class="logo">
@@ -2512,10 +2532,45 @@
                     <p>Ion Exchange is a global leader in water treatment solutions, delivering innovative technologies
                         and sustainable practices for over 60 years.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn">in</a>
-                        <a href="#" aria-label="Twitter">tw</a>
-                        <a href="#" aria-label="YouTube">yt</a>
-                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M13.3333 6.66699C14.6594 6.66699 15.9312 7.19378 16.8688 8.13146C17.8065 9.06914 18.3333 10.3409 18.3333 11.667V17.5003H15V11.667C15 11.225 14.8244 10.801 14.5118 10.4885C14.1993 10.1759 13.7753 10.0003 13.3333 10.0003C12.8913 10.0003 12.4674 10.1759 12.1548 10.4885C11.8422 10.801 11.6666 11.225 11.6666 11.667V17.5003H8.33331V11.667C8.33331 10.3409 8.8601 9.06914 9.79778 8.13146C10.7355 7.19378 12.0072 6.66699 13.3333 6.66699Z"
+                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.00002 7.5H1.66669V17.5H5.00002V7.5Z" stroke="white" stroke-width="1.66667"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3.33335 5.00033C4.25383 5.00033 5.00002 4.25413 5.00002 3.33366C5.00002 2.41318 4.25383 1.66699 3.33335 1.66699C2.41288 1.66699 1.66669 2.41318 1.66669 3.33366C1.66669 4.25413 2.41288 5.00033 3.33335 5.00033Z"
+                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M15.8333 2.5H18.75L12.5 9.58333L20 17.5H14.1667L9.58333 12.0833L4.41667 17.5H1.5L8.25 10L1.25 2.5H7.25L11.4167 7.41667L15.8333 2.5ZM14.75 15.8333H16.25L6.33333 4.08333H4.75L14.75 15.8333Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M18.3333 5.83333C18.3333 5.83333 18.1667 4.58333 17.5833 4C16.8333 3.25 16 3.25 15.6667 3.20833C13.0833 3.04167 10 3.04167 10 3.04167C10 3.04167 6.91667 3.04167 4.33333 3.20833C4 3.25 3.16667 3.25 2.41667 4C1.83333 4.58333 1.66667 5.83333 1.66667 5.83333C1.66667 5.83333 1.5 7.33333 1.5 8.83333V11.1667C1.5 12.6667 1.66667 14.1667 1.66667 14.1667C1.66667 14.1667 1.83333 15.4167 2.41667 16C3.16667 16.75 4.16667 16.7083 4.58333 16.7917C6.25 16.9583 10 17 10 17C10 17 13.0833 16.9583 15.6667 16.7917C16 16.75 16.8333 16.75 17.5833 16C18.1667 15.4167 18.3333 14.1667 18.3333 14.1667C18.3333 14.1667 18.5 12.6667 18.5 11.1667V8.83333C18.5 7.33333 18.3333 5.83333 18.3333 5.83333ZM8.33333 12.5V7.5L13.3333 10L8.33333 12.5Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M10 6.66667C8.15833 6.66667 6.66667 8.15833 6.66667 10C6.66667 11.8417 8.15833 13.3333 10 13.3333C11.8417 13.3333 13.3333 11.8417 13.3333 10C13.3333 8.15833 11.8417 6.66667 10 6.66667ZM18.3333 10C18.3333 8.70833 18.3417 7.425 18.275 6.13333C18.2083 4.60833 17.8667 3.26667 16.7333 2.13333C15.6 1 14.2583 0.658333 12.7333 0.591667C11.4417 0.525 10.1583 0.533333 8.86667 0.533333C7.575 0.533333 6.29167 0.525 5 0.591667C3.475 0.658333 2.13333 1 1 2.13333C-0.133333 3.26667 -0.475 4.60833 -0.541667 6.13333C-0.608333 7.425 -0.6 8.70833 -0.6 10C-0.6 11.2917 -0.608333 12.575 -0.541667 13.8667C-0.475 15.3917 -0.133333 16.7333 1 17.8667C2.13333 19 3.475 19.3417 5 19.4083C6.29167 19.475 7.575 19.4667 8.86667 19.4667C10.1583 19.4667 11.4417 19.475 12.7333 19.4083C14.2583 19.3417 15.6 19 16.7333 17.8667C17.8667 16.7333 18.2083 15.3917 18.275 13.8667C18.3417 12.575 18.3333 11.2917 18.3333 10ZM10 15.1667C7.15833 15.1667 4.83333 12.8417 4.83333 10C4.83333 7.15833 7.15833 4.83333 10 4.83333C12.8417 4.83333 15.1667 7.15833 15.1667 10C15.1667 12.8417 12.8417 15.1667 10 15.1667ZM15.4167 6.11667C14.7417 6.11667 14.2 5.575 14.2 4.9C14.2 4.225 14.7417 3.68333 15.4167 3.68333C16.0917 3.68333 16.6333 4.225 16.6333 4.9C16.6333 5.575 16.0917 6.11667 15.4167 6.11667Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div>
@@ -2531,9 +2586,45 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>Ion House, Dr. E. Moses Road,<br>Mahalaxmi, Mumbai - 400011, India</p>
-                    <p>+91 22 2493 8189</p>
-                    <p>info@ionexchange.co.in</p>
+                    <p><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M16.6667 8.33366C16.6667 12.4945 12.0509 16.8278 10.5009 18.1662C10.3565 18.2747 10.1807 18.3335 10 18.3335C9.81938 18.3335 9.6436 18.2747 9.49921 18.1662C7.94921 16.8278 3.33337 12.4945 3.33337 8.33366C3.33337 6.56555 4.03575 4.86986 5.286 3.61961C6.53624 2.36937 8.23193 1.66699 10 1.66699C11.7682 1.66699 13.4638 2.36937 14.7141 3.61961C15.9643 4.86986 16.6667 6.56555 16.6667 8.33366Z"
+                                    stroke="#2DD4BF" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.833C11.3807 10.833 12.5 9.71372 12.5 8.33301C12.5 6.9523 11.3807 5.83301 10 5.83301C8.61929 5.83301 7.5 6.9523 7.5 8.33301C7.5 9.71372 8.61929 10.833 10 10.833Z"
+                                    stroke="#2DD4BF" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span> Ion House, Dr. E. Moses Road,<br>Mahalaxmi, Mumbai - 400011, India</p>
+                    <p>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M18.3333 14.1004V16.6004C18.3343 16.8325 18.2867 17.0622 18.1937 17.2749C18.1008 17.4875 17.9644 17.6784 17.7934 17.8353C17.6224 17.9922 17.4205 18.1116 17.2006 18.186C16.9808 18.2603 16.7478 18.288 16.5167 18.2671C13.9523 17.9884 11.4892 17.1122 9.32498 15.7087C7.31151 14.4293 5.60443 12.7222 4.32499 10.7087C2.91663 8.53474 2.04019 6.05957 1.76665 3.48374C1.74583 3.2533 1.77321 3.02104 1.84707 2.80176C1.92092 2.58248 2.03963 2.38098 2.19562 2.21009C2.35162 2.0392 2.54149 1.90266 2.75314 1.80917C2.9648 1.71569 3.1936 1.66729 3.42499 1.66707H5.92499C6.32941 1.66309 6.72148 1.80631 7.02812 2.07002C7.33476 2.33373 7.53505 2.69995 7.59165 3.10041C7.69717 3.90046 7.89286 4.68601 8.17499 5.44207C8.2871 5.74034 8.31137 6.0645 8.24491 6.37614C8.17844 6.68778 8.02404 6.97383 7.79998 7.20041L6.74165 8.25874C7.92795 10.345 9.65536 12.0724 11.7417 13.2587L12.8 12.2004C13.0266 11.9764 13.3126 11.8219 13.6243 11.7555C13.9359 11.689 14.26 11.7133 14.5583 11.8254C15.3144 12.1075 16.0999 12.3032 16.9 12.4087C17.3048 12.4658 17.6745 12.6697 17.9388 12.9817C18.203 13.2936 18.3435 13.6917 18.3333 14.1004Z"
+                                    stroke="#2DD4BF" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>+91 22 2493 8189
+                    </p>
+                    <p>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M18.3333 5.83301L10.8408 10.6055C10.5865 10.7532 10.2977 10.831 10.0037 10.831C9.70968 10.831 9.42088 10.7532 9.16663 10.6055L1.66663 5.83301"
+                                    stroke="#2DD4BF" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M16.6666 3.33301H3.33329C2.41282 3.33301 1.66663 4.0792 1.66663 4.99967V14.9997C1.66663 15.9201 2.41282 16.6663 3.33329 16.6663H16.6666C17.5871 16.6663 18.3333 15.9201 18.3333 14.9997V4.99967C18.3333 4.0792 17.5871 3.33301 16.6666 3.33301Z"
+                                    stroke="#2DD4BF" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        info@ionexchange.co.in
+                    </p>
                 </div>
                 <div class="newsletter">
                     <h4>Stay Updated</h4>
@@ -2585,7 +2676,7 @@
 
                 const scrollToNext = () => {
                     if (!nextSection) return;
-                    nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    lenis.scrollTo(nextSection, { duration: 1.5 });
                 };
 
                 scrollHint.setAttribute('role', 'button');
@@ -2640,6 +2731,35 @@
                 openItem(sustainItems.find((item) => item.classList.contains('active')) || sustainItems[0]);
             }
         })();
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100,
+            delay: 0
+        });
+
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
     </script>
 
 
@@ -3470,6 +3590,10 @@
 
                 // 4. Camera Focus
                 world.pointOfView({ lat: d.latitude, lng: d.longitude, altitude: 1.5 }, 1000);
+
+                // Stop Lenis during globe interaction
+                lenis.stop();
+                setTimeout(() => lenis.start(), 2000);
 
                 // 5. ROTATION LOGIC: Pause for 30 seconds
                 controls.autoRotate = false;
